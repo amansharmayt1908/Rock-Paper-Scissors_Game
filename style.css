@@ -1,82 +1,96 @@
+/* Common styles for all screen sizes */
 * {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: beige;
+  }
+  
+  .title {
+    font-size: 2rem;
+    background-color: #020024;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  
+  .imgs {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Reduced gap for smaller screens */
+    margin-top: 3rem;
+  }
+  
+  .imgs img {
+    box-sizing: border-box;
+    border-radius: 2rem;
+    height: 10rem;
+    width: 10rem;
+    margin: 5px; /* Adjusted margin for smaller screens */
+    padding: 5px; /* Adjusted padding for smaller screens */
+    border: 2px solid black transparent;
+  }
+  
+  .score-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Reduced gap for smaller screens */
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  
+  .results {
+    background-color: aquamarine;
+    margin-top: 3rem;
+    font-size: 2.5rem; /* Reduced font size for smaller screens */
+  }
+  
+  #btn {
+    background-color: bisque;
+    font-size: 1.8rem; /* Reduced font size for smaller screens */
+    margin-top: 1rem;
+    border-radius: 3px;
+    border: 2px solid black;
+  }
+  
+  /* Media queries for adjusting styles based on screen size */
+  @media only screen and (max-width: 768px) {
+    .title{
+        background-color: #020024;
+        width: 420px;
+        height: 150px;
+    }
 
-body {
-  background-color: beige;
-}
 
-.title {
-  font-size: 2rem;
-  background-color: #020024;
-  color: white;
-  height: 5rem;
-  line-height: 5rem;
-}
-
-img:hover {
-  /* border-radius: 50%;
-  transition-duration: 1sec; */
-  border: 3px solid black;
-}
-
-.imgs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  /* background-color: grey; */
-  margin-top: 3rem;
-}
-
-img {
-  box-sizing: border-box;
-  border-radius: 2rem;
-  display: flex;
-  content: "";
-  color: aliceblue;
-  height: 10rem;
-  width: 10rem;
-  margin: 3px;
-  padding: 3px;
-  border: 2px solid black transparent;
-  font-size: 3rem;
-}
-
-.score-board {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  margin-top: 5rem;
-  font-size: 2rem;
-}
-
-#rock,
-#paper,
-#scissors {
-  border-radius: 2rem;
-  background-color: white;
-}
-
-.results {
-  background-color: aquamarine;
-
-  margin-top: 3rem;
-  font-size: 3rem;
-}
-
-body {
-  background-color: #aeebf7;
-}
-
-#btn {
-  background-color: bisque;
-  font-size: 2rem;
-  margin-top: 1rem;
-  border-radius: 3px;
-  border: 2px solid black;
-}
+    .imgs {
+      gap: 1rem; /* Further reduced gap for smaller screens */
+      margin-top: 0.5rem;
+    }
+  
+    .imgs img {
+      height: 8rem; /* Adjusted height for smaller screens */
+      width: 8rem; /* Adjusted width for smaller screens */
+    }
+  
+    .score-board {
+        font-size: 1.5rem;
+      gap: 1rem; /* Further reduced gap for smaller screens */
+      margin-top: 2rem;
+    }
+  
+    .results {
+      font-size: 1rem; /* Reduced font size for smaller screens */
+    }
+  
+    #btn {
+      font-size: 1.6rem; /* Reduced font size for smaller screens */
+    }
+  }
+  
